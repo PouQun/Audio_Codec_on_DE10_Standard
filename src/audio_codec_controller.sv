@@ -9,7 +9,7 @@ module  audio_codec_controller
     input  logic  load_aud_dat_i,
     input  logic  fpga_aud_adcdat_i,
 
-    input  logic  [23:0]    data_to_lineout_i,
+    input  logic  [23:0]  data_to_lineout_i,
     output logic  [23:0]  sample_from_linein_o,
 
     output logic  done_config_o,
