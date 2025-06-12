@@ -19,7 +19,7 @@ module codec_digital_audio_interface
     output logic [23:0] sample_from_linein_o
   );
   
-  logic    clk_sample;
+  logic        clk_sample;
   logic [23:0] data_from_linein_t;
   logic [23:0] sample_to_lineout_t;
   
@@ -45,15 +45,15 @@ module codec_digital_audio_interface
     if      ( ~rst_ni      )  begin
                                   sample_to_lineout_t  <= 'b0;
                                   sample_from_linein_o <= 'b0;
-                             end
+                              end
     else if ( load_i       )  begin
                                   sample_to_lineout_t  <= data_to_lineout_i;
                                   sample_from_linein_o <= data_from_linein_t;
-                             end
-    else                       begin
+                              end
+    else                      begin
                                   sample_to_lineout_t  <= sample_to_lineout_t;
                                   sample_from_linein_o <= sample_from_linein_o;
-                             end
+                              end
   end
   
 endmodule
