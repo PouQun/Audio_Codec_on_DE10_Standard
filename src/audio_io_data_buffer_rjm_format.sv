@@ -20,22 +20,6 @@ module audio_io_data_buffer_rjm_format // for R_ight J_ustified M_ode
   parameter READY    = 2'd0;
   parameter WAITING  = 2'd1;
   parameter SENDING  = 2'd2;
-///////////////////////////////////////////////
-///////////////////////////////////////////////
-///////////////////////////////////////////////
-  logic  [7:0] clk_count_debug;
-  always_ff@(posedge clk_i, negedge rst_ni) begin: COUNT_DEBUG
-    if      ( ~rst_ni )  begin
-                            clk_count_debug <= 'b0;
-                         end
-    else if (  en_i )    begin
-                            clk_count_debug <= ( load_i  ) ? ( clk_count_debug + 8'd1 ) : clk_count_debug;
-                         end
-  end
-
-///////////////////////////////////////////////
-///////////////////////////////////////////////
-///////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////* FSM */ BEGIN 
   
