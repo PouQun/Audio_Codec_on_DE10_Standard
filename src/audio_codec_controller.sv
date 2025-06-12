@@ -25,7 +25,7 @@ module  audio_codec_controller
     inout  wire   fpga_i2c_sdat_io
   );
   
-  setup_codec  CODEC_SETUP  (
+  setup_codec_via_i2c  CODEC_SETUP  (
                                .clk_50mhz ( clk_50mhz_i      ),
                                .rst_ni    ( rst_ni           ),
                                .en_i      ( en_i             ),
