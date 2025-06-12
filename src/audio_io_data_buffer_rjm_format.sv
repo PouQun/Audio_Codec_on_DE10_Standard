@@ -1,20 +1,20 @@
 module audio_io_data_buffer_rjm_format // for R_ight J_ustified M_ode
   (
-    input  logic        clk_i, //12Mhz
-    input  logic        rst_ni,
-    input  logic        en_i,
+    input  logic          clk_i, //12Mhz
+    input  logic          rst_ni,
+    input  logic          en_i,
     
     input  logic          load_i,
     input  logic          adc_serial_data_i,
-    input  logic [23:0] dac_parallel_data_i,
+    input  logic [23:0]   dac_parallel_data_i,
   
     output logic          dac_serial_data_o,
-    output logic [23:0] adc_parallel_data_o,
+    output logic [23:0]   adc_parallel_data_o,
   
-    output logic  codec_xck_o,
-    output logic  codec_bclk_o,
-    output logic  codec_lrck_o,
-    output logic  sample_clk_o
+    output logic          codec_xck_o,
+    output logic          codec_bclk_o,
+    output logic          codec_lrck_o,
+    output logic          sample_clk_o
   );
   
   parameter READY    = 2'd0;
@@ -79,11 +79,11 @@ module audio_io_data_buffer_rjm_format // for R_ight J_ustified M_ode
   always_comb begin: CASE_OF_STATES
    case ( now_state )
     READY     : begin
-                 if      ( load_i  )     begin
+                 if      ( load_i  )       begin
                                                     nxt_state = WAITING;
                                                     lrck      = 1'b1;
                                                     sending   = 1'b0;
-                                         end
+                                           end
                  else                      begin
                                                     nxt_state = READY;
                                                     lrck      = 1'b0;
