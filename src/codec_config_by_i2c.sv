@@ -50,9 +50,6 @@ module  codec_config_by_i2c
       reg_setup[13]     = NONE_USE;
       reg_setup[14]     = NONE_USE;
       reg_setup[15]     = NONE_USE;
-/*      reg_setup.data_a  = 16'd0;
-      reg_setup.waddr_a =  4'd0;
-      reg_setup.we_a    =  1'd0;*/
    end
   
   
