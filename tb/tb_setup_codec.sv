@@ -43,10 +43,10 @@ module tb_setup_codec;
   
   assign fsm_check  = DUT.I2C_PROTOCOL.i2c_fsm;
   assign i2c_sdin_o = ( 
-                        (fsm_check == 3) ||
-                        (fsm_check == 5) ||
-                        (fsm_check == 7)
-                       )                          ? 1'b0 : 1'bz;
+                         (fsm_check == 3) ||   // block this line (only) to create NACK for 1'st check-ack        
+                         (fsm_check == 5) ||   // block this line (only) to create NACK for 2'nd check-ack        
+                         (fsm_check == 7)      // block this line (only) to create NACK for 3'rd check-ack        
+                      )   ? 1'b0 : 1'bz ;      // High-Z to 0 by pull-down reg from WM8731, if there is any check-ack blocked, sdin = 1'bz, which means getting NACK    
 
   // Test sequence
   initial begin
