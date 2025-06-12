@@ -22,7 +22,7 @@ module  audio_codec_controller
 
     output logic  clk_i2c_o,
     output logic  fpga_i2c_sclk_o,
-    inout  logic  fpga_i2c_sdat_io
+    inout  wire   fpga_i2c_sdat_io
   );
   
   setup_codec  CODEC_SETUP  (
