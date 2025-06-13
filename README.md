@@ -5,4 +5,5 @@ A simple controller for controlling the Audio Codec WM8731 on DE10-Standard kit.
 
 ## I/O Digital audio data interface:
 - Right Justified Mode waveform:
+! [] ()
 - 
