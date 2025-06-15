@@ -5,5 +5,5 @@ A simple controller for controlling the Audio Codec WM8731 on DE10-Standard kit.
 
 ## I/O Digital audio data interface:
 - Digital audio signals waveform bases on Right Justified Mode audio format:
-! [Right Justified Mode [by ref](ref/WolfsonWM8731.pdf) ] (doc/pics/RJM_audio.png)
+![Right Justified Mode [by ref](ref/WolfsonWM8731.pdf) ] (doc/pics/RJM_audio.png)
 - 
