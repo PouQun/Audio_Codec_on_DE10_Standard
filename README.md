@@ -2,7 +2,7 @@
 A simple controller for controlling the Audio Codec WM8731 on DE10-Standard kit.
 
 ## Design
-### Passive configuration via I2C interface:
+#### Passive configuration via I2C interface:
 - I2C interface:
 
 ![2-Wire_Interface [by ref](ref/WolfsonWM8731.pdf)](doc/pics/2-wire_serial_interface.png)
