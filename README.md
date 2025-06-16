@@ -14,20 +14,20 @@ A simple controller for controlling the Audio Codec WM8731 on DE10-Standard kit.
 
  * Register:
     
-  | Reg | Data config (hex) | Target 
-  |;----|;-----------------;|;-------
-  | R15 | 1E00              |        
-  | R6  | 0C10              |        
-  | R2  | 0579              |        
-  | R3  | 0779              |        
-  | R0  | 0017              |        
-  | R1  | 0217              |        
-  | R4  | 0810              |        
-  | R5  | 0A00              |        
-  | R7  | 0E08              |        
-  | R8  | 1001              |        
-  | R9  | 1201              |        
-  | R6  | 0C02              |        
+Reg | Data config (hex) | Target 
+;----|;-----------------;|;-------
+ R15 | 1E00              |        
+ R6  | 0C10              |        
+ R2  | 0579              |        
+ R3  | 0779              |        
+ R0  | 0017              |        
+ R1  | 0217              |        
+ R4  | 0810              |        
+ R5  | 0A00              |        
+ R7  | 0E08              |        
+ R8  | 1001              |        
+ R9  | 1201              |        
+ R6  | 0C02              |        
 
 ### I/O Digital audio interface:
 - Digital audio signals waveform bases on Right Justified Mode audio format:
