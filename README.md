@@ -8,13 +8,13 @@ A simple controller for controlling the Audio Codec WM8731 on DE10-Standard kit.
 ![2-Wire_Interface [by ref](ref/WolfsonWM8731.pdf)](doc/pics/2-wire_serial_interface.png)
 
 - Register setup:
- + Configuration Sequence:
+ * Configuration Sequence:
 
 ![ SETUP_SEQUENCE [by ref](ref/WolfsonWM8731.pdf)](doc/pics/PowerUD_Sequence.png)
 
  * Register:
     
-| 'Reg'  | 'Data config (hex)' | 'Target' |
+| `Reg`  | `Data config (hex)` | `Target` |
 | :--- | :---------------: | :----- |
 | R15  | 1E00              | 1      |
 | R6   | 0C10              | 1      |
