@@ -2,12 +2,12 @@
 A simple controller for controlling the Audio Codec WM8731 on DE10-Standard kit.
 
 ## Design
-#### Passive configuration via I2C interface:
-- I2C interface:
+### Passive configuration via I2C interface:
+1. I2C interface:
 
 ![2-Wire_Interface [by ref](ref/WolfsonWM8731.pdf)](doc/pics/2-wire_serial_interface.png)
 
-- Register setup:
+2. Register setup:
  * Configuration Sequence:
 
 ![ SETUP_SEQUENCE [by ref](ref/WolfsonWM8731.pdf)](doc/pics/PowerUD_Sequence.png)
@@ -30,11 +30,11 @@ A simple controller for controlling the Audio Codec WM8731 on DE10-Standard kit.
 | R6   | 0C02              | 1      |
 
 ### I/O Digital audio interface:
-- Digital audio signals waveform bases on Right Justified Mode audio format:
+1. Digital audio signals waveform bases on Right Justified Mode audio format:
   
 ![Right Justified Mode [by ref](ref/WolfsonWM8731.pdf)](doc/pics/RJM_audio.png)
 
-- Hardware diagram of digital audio interface:
+2. Hardware diagram of digital audio interface:
 
 ![Digital audio dataflow](doc/pics/Datapath_through_Audio_Codec_Controller.png)
 
