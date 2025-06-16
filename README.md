@@ -15,7 +15,7 @@ A simple controller for controlling the Audio Codec WM8731 on DE10-Standard kit.
  * Register:
     
 | Reg  | Data config (hex) | Target |
-| ;--- | ;---------------; | ;----- |
+| :--- | :---------------: | :----- |
 | R15  | 1E00              | 1      |
 | R6   | 0C10              | 1      |
 | R2   | 0579              | 1      |
