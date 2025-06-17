@@ -31,7 +31,7 @@ A simple controller for controlling the Audio Codec WM8731 on DE10-Standard kit.
 | R9   | 1201              | Set `       1` to `ACTIVE     `: Active CODEC |
 | R6   | 0C02              | Set `       0` to `PDOUT      `: Power up Outputs  |
 
-   For more detail, have a look in [WM8731_Datasheet](ref/WolfsonWM8731.pdf)
+   For more detail, have a look in [WM8731_Datasheet](ref/WolfsonWM8731.pdf).
   
 ### I/O Digital audio interface:
 - Digital audio signals waveform bases on Right Justified Mode audio format:
