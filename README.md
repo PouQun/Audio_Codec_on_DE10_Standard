@@ -18,7 +18,7 @@ A simple controller for controlling the Audio Codec WM8731 on DE10-Standard kit.
     
 | `Reg`  | `Data config (hex)` | `Target` |
 | :--- | :---------------: | :----- |
-| R15  | 1E00              | Set 00000000 to `RESET`      : Reset CODEC |
+| R15  | 1E00              | `Set 00000000 to` `RESET`      : Reset CODEC |
 | R6   | 0C10              | Set        0 to `PDOUT`      : Power up all except Outputs_PowerDown |
 | R2   | 0579              | Set  1111001 to `LHPVOL`     : 0dB Left  LineOut volume |
 | R3   | 0779              | Set  1111001 to `RHPVOL`     : 0dB Right LineOut volume |
@@ -28,9 +28,7 @@ A simple controller for controlling the Audio Codec WM8731 on DE10-Standard kit.
 | R5   | 0A00              | Set        0 to `DACMU`      : Disable DAC softmute |
 | R7   | 0E08              | Set       00 to `FORMAT`     : Select Right Justified mode for audio data format 
                         <br> Set       10 to `IWL`        : 24-bit input audio data length |
-| R8   | 1001              | Set        1 to `USB/NORMAL` : Select USB-mode
-                        <br> Set        0 to `BOSR`       : 250fs 
-                        <br> Set     0000 to `SR`         : Select 48kHz for sampling frequency for both ADC and DAC |
+| R8   | 1001              | Set        1 to `USB/NORMAL` : Select USB-mode <br> Set        0 to `BOSR`       : 250fs <br> Set     0000 to `SR`         : Select 48kHz for sampling frequency for both ADC and DAC |
 | R9   | 1201              | Set        1 to `ACTIVE`     : Active CODEC |
 | R6   | 0C02              | Set        0 to `PDOUT`      : Power up Outputs  |
 
