@@ -7,28 +7,39 @@ A simple controller for controlling the Audio Codec WM8731 on DE10-Standard kit.
 
   ![2-Wire_Interface [by ref](ref/WolfsonWM8731.pdf)](doc/pics/2-wire_serial_interface.png)
 
+  * With I2C Address: 0x34 ( write only )
+
 - Register setup:
   * Configuration Sequence:
   
     ![ SETUP_SEQUENCE [by ref](ref/WolfsonWM8731.pdf)](doc/pics/PowerUD_Sequence.png)
 
-  * Register:
+  * Registers are set up passively by sequence:
     
 | `Reg`  | `Data config (hex)` | `Target` |
 | :--- | :---------------: | :----- |
-| R15  | 1E00              | 1      |
-| R6   | 0C10              | 1      |
-| R2   | 0579              | 1      |
-| R3   | 0779              | 1      |
-| R0   | 0017              | 1      |
-| R1   | 0217              | 1      |
-| R4   | 0810              | 1      |
-| R5   | 0A00              | 1      |
-| R7   | 0E08              | 1      |
-| R8   | 1001              | 1      |
-| R9   | 1201              | 1      |
-| R6   | 0C02              | 1      |
+| R15  | 1E00              | Set 00000000 to `RESET`      : Reset CODEC |
+| R6   | 0C10              | Set        0 to `PDOUT`      : Power up all except Outputs_PowerDown |
+| R2   | 0579              | Set  1111001 to `LHPVOL`     : 0dB Left  LineOut volume |
+| R3   | 0779              | Set  1111001 to `RHPVOL`     : 0dB Right LineOut volume |
+| R0   | 0017              | Set    10111 to `LINVOL`     : 0dB Left  LineIn  volume |
+| R1   | 0217              | Set    10111 to `RINVOL`     : 0dB Right LineIn  volume |
+| R4   | 0810              | Set        0 to `INSEL`      : Select LineIn to ADC
+                        <br> Set        1 to `MUTEMIC`    : Enable mute MicIn
+                        <br> Set        1 to `DACSEL`     : Select DAC to LineOut
+                        <br> Set        0 to `BYPASS`     : Disable ByPass switch
+                        <br> Set        0 to `SIDETONE`   : Disable SideTone switch |
+| R5   | 0A00              | Set        0 to `DACMU`      : Disable DAC softmute |
+| R7   | 0E08              | Set       00 to `FORMAT`     : Select Right Justified mode for audio data format 
+                        <br> Set       10 to `IWL`        : 24-bit input audio data length |
+| R8   | 1001              | Set        1 to `USB/NORMAL` : Select USB-mode
+                        <br> Set        0 to `BOSR`       : 250fs 
+                        <br> Set     0000 to `SR`         : Select 48kHz for sampling frequency for both ADC and DAC |
+| R9   | 1201              | Set        1 to `ACTIVE`     : Active CODEC |
+| R6   | 0C02              | Set        0 to `PDOUT`      : Power up Outputs  |
 
+   For more detail, have a look in [WM8731_Datasheet](ref/WolfsonWM8731.pdf)
+  
 ### I/O Digital audio interface:
 - Digital audio signals waveform bases on Right Justified Mode audio format:
 
