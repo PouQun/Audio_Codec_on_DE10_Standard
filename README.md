@@ -46,6 +46,8 @@ A simple controller for controlling the Audio Codec WM8731 on DE10-Standard kit.
 ### I2C Interface controller:
 - Waveform of I2C_INTERFACE_CONTROLLER:
 
+
+
 ### Audio data buffer:
 - Waveform of signals based on RJM-format:
 
@@ -61,6 +63,7 @@ A simple controller for controlling the Audio Codec WM8731 on DE10-Standard kit.
 
 
 ## Implementation on DE10-Standard kit:
+- Used in [Audio Filter](https://github.com/PouQun/Cascade-SOS-IIR-Structure_Implementation_on_FPGA.git) and [Audio Equalizer](https://github.com/PouQun/Audio_Equalizer_on_FPGA.git).
 
 
 
