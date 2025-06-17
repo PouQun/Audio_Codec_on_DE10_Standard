@@ -24,7 +24,7 @@ A simple controller for controlling the Audio Codec WM8731 on DE10-Standard kit.
 | R3   | 0779              | Set ` 1111001` to `RHPVOL     `: 0dB Right LineOut volume |
 | R0   | 0017              | Set `   10111` to `LINVOL     `: 0dB Left  LineIn  volume |
 | R1   | 0217              | Set `   10111` to `RINVOL     `: 0dB Right LineIn  volume |
-| R4   | 0810              | Set `       0` to `INSEL      `: Select LineIn to ADC <br> Set `       1` to `MUTEMIC    `: Enable mute MicIn <br> Set `       1` to `DACSEL     `: Select DAC to LineOut <br> Set `       0` to `BYPASS     `: Disable ByPass switch <br> Set `       0` to `SIDETONE`   : Disable SideTone switch |
+| R4   | 0810              | Set `       0` to `INSEL      `: Select LineIn to ADC <br> Set `       1` to `MUTEMIC    `: Enable mute MicIn <br> Set `       1` to `DACSEL     `: Select DAC to LineOut <br> Set `       0` to `BYPASS     `: Disable ByPass switch <br> Set `       0` to `SIDETONE   `: Disable SideTone switch |
 | R5   | 0A00              | Set `       0` to `DACMU      `: Disable DAC softmute |
 | R7   | 0E08              | Set `      00` to `FORMAT     `: Select Right Justified mode for audio data format <br> Set `      10` to `IWL        `: 24-bit input audio data length |
 | R8   | 1001              | Set `       1` to `USB/NORMAL `: Select USB-mode <br> Set `       0` to `BOSR       `: 250fs <br> Set `    0000` to `SR         `: Select 48kHz for sampling frequency for both ADC and DAC |
