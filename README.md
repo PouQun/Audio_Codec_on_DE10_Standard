@@ -19,7 +19,7 @@ A simple controller for controlling the Audio Codec WM8731 on DE10-Standard kit.
 | `Reg`  | `Data config (hex)` | `Target` |
 | :--- | :---------------: | :----- |
 | R15  | 1E00              | `Set 00000000 to` `RESET`      : Reset CODEC |
-| R6   | 0C10              | Set        0 to `PDOUT`      : Power up all except Outputs_PowerDown |
+| R6   | 0C10              | `Set        0 to` `PDOUT`      : Power up all except Outputs_PowerDown |
 | R2   | 0579              | Set  1111001 to `LHPVOL`     : 0dB Left  LineOut volume |
 | R3   | 0779              | Set  1111001 to `RHPVOL`     : 0dB Right LineOut volume |
 | R0   | 0017              | Set    10111 to `LINVOL`     : 0dB Left  LineIn  volume |
